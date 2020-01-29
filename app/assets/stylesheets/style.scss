@@ -1,0 +1,27 @@
+.body{
+  background-image: url("syasenn.jpg");
+  background-size: cover;
+  
+  .header{
+    font-size: 30px;
+    padding: 50px;
+    
+  }
+  a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:visited {
+  color: black;
+  }
+  
+  a:hover {
+  color:#FF0099;
+  text-decoration:underline;
+  }
+  
+  a:active {
+  color:#33CC00;
+  }
+}

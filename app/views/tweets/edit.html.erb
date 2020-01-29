@@ -1,12 +1,14 @@
-<div class="contents row">
-  <div class="container">
-    <%= form_with(model: @tweet, local: true) do |f| %>
+<div class="tou">
+    <%= form_with(model: @tweet, local: true) do |form| %>
       <h3>
         編集する
       </h3>
-      <%= f.text_field :image, placeholder: "画像URL" %>
-      <%= f.text_area :text, placeholder: "文字入力" , rows: "10" %>
-      <%= f.submit "更新" %>
+       <div class="tou_1">
+      <ul>
+      <li><%= form.text_field :image, placeholder: "画像URL" %></li>
+      <li><%= form.text_area :text, placeholder: "文字入力" , rows: "10" %></li>
+      <li><%= form.submit "更新" %></li>
+      </ul>
     <% end %>
   </div>
 </div>
