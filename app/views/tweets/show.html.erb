@@ -3,19 +3,19 @@
         <span>投稿者</span><%= @tweet.user.nickname %>
       </a>
     </span>
+       <% if user_signed_in? && current_user.id == @tweet.user_id %>
       <ul class="more">
             <li>
             <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %>
             <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, data: { confirm: '削除しますか?' } %>
             </li>
             </ul>
-<div class ="con">
-   <% if user_signed_in? && current_user.id == @tweet.user_id %>
+
       
   <div class="img" style="background-image: url(<%= @tweet.image %>);">
   </div>
 
-            <div class="more_1">
+            <div class="more_2">
       <%= simple_format(@tweet.text) %>
       </div>
       
