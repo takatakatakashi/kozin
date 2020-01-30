@@ -1,23 +1,27 @@
+ <span class="name">
+      <a href="/users/<%= @tweet.user.id %>">
+        <span>投稿者</span><%= @tweet.user.nickname %>
+      </a>
+    </span>
+      <ul class="more">
+            <li>
+            <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %>
+            <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, data: { confirm: '削除しますか?' } %>
+            </li>
+            </ul>
 <div class ="con">
    <% if user_signed_in? && current_user.id == @tweet.user_id %>
       
-  <div class="content_post" style="background-image: url(<%= @tweet.image %>);">
+  <div class="img" style="background-image: url(<%= @tweet.image %>);">
   </div>
-  <div class="more">
-            <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %>
-            <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, data: { confirm: '削除しますか?' } %>
-            </div>
+
             <div class="more_1">
       <%= simple_format(@tweet.text) %>
       </div>
       
     <% end %>
     
-    <span class="name">
-      <a href="/users/<%= @tweet.user.id %>">
-        <span>投稿者</span><%= @tweet.user.nickname %>
-      </a>
-    </span>
+   
   <div class="container">
     <% if current_user %>
     <%= form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form| %> 

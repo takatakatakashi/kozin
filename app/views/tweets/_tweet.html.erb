@@ -1,14 +1,24 @@
-<div class="content_post" style="background-image: url(<%= tweet.image %>);">
+
+<div class="img" style="background-image: url(<%= tweet.image %>);">
   </div>
-   <div class="more">
-        <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %>
+  <div class="more">
+   <a href="/users/<%= tweet.user.id %>">
+   <ul>
+   <li>
+          <span>投稿者</span><%= tweet.user.nickname %>
+          </li>
+          <li>
+          <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %>
+          </li>
+          </ul>
+        </a>
+   
+        
         </div>
         <div class="more_1">
       <%= simple_format(tweet.text) %>
       <span class="name">
-        <a href="/users/<%= tweet.user.id %>">
-          <span>投稿者</span><%= tweet.user.nickname %>
-        </a>
+       
           <% if user_signed_in? && current_user.id == tweet.user_id %>
           <% end %>
         
