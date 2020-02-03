@@ -18,6 +18,9 @@
 }
 .container{
   font-size: 20px;
+  .comento{
+  width: 1000%;
+  }
 }
 .name{
   font-size: 20px;
@@ -138,6 +141,7 @@ li {
 
     }
     input,textarea {
+      height: 30px;
       width: 10%;
       border-radius: 5px;
       font-family: "游ゴシック", "YuGothic";
@@ -150,3 +154,4 @@ li {
     }
   }
 
+  
