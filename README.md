@@ -4,7 +4,8 @@
 
 # 🔷 トップページ 🔷
 
-> 投稿された画像、文字表示
+> 投稿された画像、コメント表示
+
 <img src=https://i.gyazo.com/ea79ae990656efa09df7594c42de5cc4.jpg>
 <img src=https://i.gyazo.com/b1129b439d12144fc0c76c89c05bb012.jpg>
 <img src=https://i.gyazo.com/928b2a48c418e13bd66a8b799db174b0.jpg>
