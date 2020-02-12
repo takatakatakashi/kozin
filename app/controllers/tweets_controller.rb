@@ -15,7 +15,6 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     tweet = Tweet.find(params[:id])
     tweet.destroy
   end
