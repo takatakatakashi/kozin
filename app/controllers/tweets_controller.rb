@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :show]
+  before_action :set_tweet, only: [:edit, :show, :destroy]
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
@@ -15,7 +15,6 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    tweet = Tweet.find(params[:id])
     tweet.destroy
   end
 
